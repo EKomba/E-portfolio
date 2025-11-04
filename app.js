@@ -1,6 +1,6 @@
 // template_x3j1358
-// service_4u543vs
-// -hAOF4wSC_oYwV-jv
+// service_upz7xte
+// bWlslWccE7wzQQgaF
 
 let isModalOpen = false;
 let contrastToggle = false;
@@ -34,20 +34,22 @@ function contact(event) {
     const success = document.querySelector(".modal__overlay--success");
     loading.classList += " modal__overlay--visible";
     emailjs
-        .sendForm(
-            'service_4u543vs',
-            'template_x3j1358',
-            event.target,
-            '-hAOF4wSC_oYwV-jv'
-    ).then(() => {
+      .sendForm(
+        "service_upz7xte",
+        "template_x3j1358",
+        event.target,
+        "bWlslWccE7wzQQgaF"
+      )
+      .then(() => {
         loading.classList.remove("modal__overlay--visible");
         success.classList += " modal__overlay--visible";
-    }).catch(() => {
-        loading.classList.remove('modal__overlay--visible')
+      })
+      .catch(() => {
+        loading.classList.remove("modal__overlay--visible");
         alert(
-            'The email service is temporarily unavailable. Please contact me directly on emmanuelkomba22@gmail.com'
+          "The email service is temporarily unavailable. Please contact me directly on kombaetk@gmail.com"
         );
-    })
+      });
 }
 
 function toggleModal() {
